@@ -8,7 +8,7 @@ window.onload = () => {
 
   const captchaLength = 1;
   const validLength = 2;
-  let feedback = "Please solve captcha first";
+  let feedback = "Please solve the captcha first";
   let captcha = getCaptchaText(captchaLength);
   let isLoginButtonDisabled = false;
 
@@ -30,12 +30,12 @@ window.onload = () => {
     if (captchaInput.value === captcha) {
       toggleDisabledProperty([usernameInput, passwordInput]);
       verifyButton.innerHTML = "Verified!";
-      feedbackContainer.innerHTML = "Please solve captcha first";
+      feedbackContainer.innerHTML = "Captcha verified! You can now login";
     } else {
       feedbackContainer.innerHTML = "Incorrect Captcha";
     }
   };
-
+  
   [usernameInput, passwordInput].forEach((input) => {
     input.onkeyup = () => {
       captcha = getCaptchaText(captchaLength);
@@ -43,6 +43,8 @@ window.onload = () => {
       toggleDisabledProperty([usernameInput, passwordInput]);
       captchaInput.value = "";
       verifyButton.innerHTML = "Verify Captcha";
+      feedbackContainer.innerHTML = "Please solve the captcha first";
+
       
       if(input.value.length >= validLength) {
         isLoginButtonDisabled = !isLoginFieldsValid(usernameInput.value, passwordInput.value, validLength);
