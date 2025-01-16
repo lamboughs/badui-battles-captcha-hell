@@ -1,6 +1,6 @@
 # BadUI Battles Captcha Hell
 BadUI Battles inspired: "World's Safest Form"\
-You can vew and interact with the UI here: [Capta Hell](https://lamboughs.github.io/badui-battles-captcha-hell/)
+You can vew and interact with the UI here: [Captcha Hell](https://lamboughs.github.io/badui-battles-captcha-hell/)
 
 ## Challenges:
 - Laziness 😊
