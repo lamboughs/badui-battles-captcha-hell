@@ -7,8 +7,10 @@ window.onload = () => {
   console.log("ready...");
 
   const captchaLength = 1;
+  const validLength = 2;
   let feedback = "Please solve captcha first";
   let captcha = getCaptchaText(captchaLength);
+  let isLoginButtonDisabled = false;
 
   const feedbackContainer = $(".feedback");
   const captchaContainer = $(".captcha-text");
@@ -28,6 +30,9 @@ window.onload = () => {
     if (captchaInput.value === captcha) {
       toggleDisabledProperty([usernameInput, passwordInput]);
       verifyButton.innerHTML = "Verified!";
+      feedbackContainer.innerHTML = "Please solve captcha first";
+    } else {
+      feedbackContainer.innerHTML = "Incorrect Captcha";
     }
   };
 
@@ -38,6 +43,11 @@ window.onload = () => {
       toggleDisabledProperty([usernameInput, passwordInput]);
       captchaInput.value = "";
       verifyButton.innerHTML = "Verify Captcha";
+      
+      if(input.value.length >= validLength) {
+        isLoginButtonDisabled = !isLoginFieldsValid(usernameInput.value, passwordInput.value, validLength);
+        loginButton.disabled = isLoginButtonDisabled;
+      }
     };
   });
 };
@@ -66,3 +76,11 @@ function getCaptchaText(captchaLength) {
 const getRandomNumber = () => {
   return Math.floor(Math.random() * alphaNum.length);
 };
+
+const isLoginFieldsValid = (username, password, validLength) => {
+  if(username.length >= validLength && password.length >= validLength) {
+    return true;
+  }
+
+  return false;
+}
