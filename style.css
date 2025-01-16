@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100dvh;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex.flex-column {
+  flex-direction: column;
+}
+
+main {
+  background: #f0f0f8;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-group {
+  align-items: center;
+  justify-content: center;
+  gap: .8em;
+  background-color: #fff;
+  padding: 2em;
+  border-radius: .5em;
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, .1);
+}
+
+.form-group h2 {
+  width: 100%;
+  text-align: left;
+}
+
+.feedback {
+  color: #444;
+  font-size: .8em;
+}
+
+.captcha-text {
+  border: 1px dashed #aaa;
+  background-color: #eee;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 700;
+  font-size: 1.2em;
+  padding: .4em 1em;
+  width: 180px;
+  text-align: center;
+  translate: 0 .3em;
+}
+
+input, button {
+  height: 36px;
+  width: 320px;
+  border-radius: .3em;
+  border-width: 1px;
+  outline: none !important;
+}
+input {
+  border: 2px solid #eee;
+  padding: 0 .5em;
+}
+button {
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+#verify-btn {
+  background-color: #42a646;
+  translate: 0 -.6em;
+}
+#login-btn {
+  background-color: #166cee;
+}
+#login-btn:disabled {
+  background-color: #ccc;
+}

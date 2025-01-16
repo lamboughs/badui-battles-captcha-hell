@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>badUIbattles | Captcha Hell</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <main class="flex flex-column">
+      <div class="flex flex-column form-group">
+        <h2>Please Login</h2>
+        <p class="feedback">Test feedback</p>
+        <input type="text" placeholder="Username" id="username-in" disabled />
+        <input
+          type="password"
+          placeholder="Password"
+          id="password-in"
+          disabled
+        />
+        <div class="captcha-text">...</div>
+        <input type="text" placeholder="Enter Captcha" id="captcha-in" />
+        <button type="button" id="verify-btn">Verify Captcha</button>
+        <button type="button" id="login-btn" disabled>Login</button>
+      </div>
+    </main>
+  </body>
+</html>
