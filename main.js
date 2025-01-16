@@ -6,9 +6,9 @@ const alphaNum =
 window.onload = () => {
   console.log("ready...");
 
-  const captchaLength = 1;
   let feedback = "Please solve captcha first";
   let captcha = getCaptchaText(captchaLength);
+  const captchaLength = 1;
 
   const feedbackContainer = $(".feedback");
   const captchaContainer = $(".captcha-text");
