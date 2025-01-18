@@ -6,8 +6,8 @@ const alphaNum =
 window.onload = () => {
   console.log("ready...");
 
-  const captchaLength = 1;
-  const validLength = 2;
+  const captchaLength = 6;
+  const validLength = 4;
   let feedback = "Please solve the captcha first";
   let captcha = getCaptchaText(captchaLength);
   let isLoginButtonDisabled = false;
